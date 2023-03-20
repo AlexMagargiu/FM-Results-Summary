@@ -21,7 +21,7 @@ main{
 .left{
     display: flex;
     flex-direction: column;
-    min-width: 20rem;
+    width: 20rem;
     background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     align-items: center;
     border-radius: 1.5rem;
@@ -72,7 +72,7 @@ main{
 .right{
     display: flex;
     flex-direction: column;
-    min-width: 20rem;
+    width: 20rem;
     align-items: center;
     padding: 2rem;
     gap: 1rem;
@@ -89,7 +89,7 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 15rem;
+    width: 15rem;
     height: 3rem;
     border-radius: 8px;
     padding: 10px;
@@ -168,4 +168,28 @@ button:active, button:hover{
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 375px){
+    main{
+        overflow-y: hidden;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .content{
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    .left{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        width: 100vw;
+        gap: 0px;
+    }
+
+    .right{
+        width: 100vw;
+    }
 }
